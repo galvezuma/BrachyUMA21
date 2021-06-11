@@ -23,7 +23,7 @@ import java.util.stream.Stream;
  * - Diamond: It has been manually curated.
  */
 public class GenerateSVG {
-    private static final String INPUT_DATA_FILE = "G:\\Data_JIC\\NetBeansProjects\\Utilities\\src\\brachypodium\\varieties\\searchgenes\\dehydrins_ecotypes_figuraMD2.sal"; // "G:\\Data_JIC\\NetBeansProjects\\Utilities\\src\\brachypodium\\varieties\\searchgenes\\dehydrins.sal";
+    private static final String INPUT_DATA_FILE = "/datafiles/dehydrins_ecotypes.data"; // "G:\\Data_JIC\\NetBeansProjects\\Utilities\\src\\brachypodium\\varieties\\searchgenes\\dehydrins.sal";
     // Lengths of chromosomes taken from:
     // Genome sequencing and analysis of the model grass Brachypodium distachyon (https://www.nature.com/articles/nature08747)
     private static final int[] CHR_LENGTHS = {74834646, 59328898, 59892396, 48648102, 28648102};
@@ -32,7 +32,7 @@ public class GenerateSVG {
     private static String[] titles = {};
     static {
         String line = null;
-        try (BufferedReader in = Files.newBufferedReader(Paths.get("G:\\Data_JIC\\NetBeansProjects\\Utilities\\src\\brachypodium\\varieties\\searchgenes\\Order.txt"));){
+        try (BufferedReader in = Files.newBufferedReader(Paths.get("../datafiles/Order.txt"));){
             List<String> colors = new ArrayList<>();
             List<String> texts = new ArrayList<>();
             while ((line = in.readLine()) != null)
@@ -42,13 +42,13 @@ public class GenerateSVG {
                 }
             backgrounds = colors.toArray(backgrounds);
             titles = texts.toArray(titles);
-        } catch (Exception x) { System.err.println(line); x.printStackTrace(); }
+        } catch (Exception x) { System.err.println(line); System.err.println(Paths.get(".").toAbsolutePath().toString()); x.printStackTrace(); }
     }
     public static void main(String[] args) {
         loadGenes(); // This fills the variable: varieties.
         // verResumen();
         //Collections.sort(varieties);
-        try (PrintStream myOut = new PrintStream(new BufferedOutputStream(new FileOutputStream("d:\\basura\\resultado.html")), true)) {
+        try (PrintStream myOut = new PrintStream(new BufferedOutputStream(new FileOutputStream("result.html")), true)) {
             myOut.println(initHTML());
             myOut.println(firstRow());
             FillColors.iterateVarietiesAgainstFirst(varieties); // This groups on Bdhn1 to Bdhn10
@@ -141,7 +141,6 @@ public class GenerateSVG {
         myOut.println(text.replace(keyword, genesHTML));
     }
     
-    @SuppressWarnings("empty-statement")
     public static void loadGenes() {
         try (BufferedReader in = Files.newBufferedReader(Paths.get(INPUT_DATA_FILE));){
             int backgroundPos = 0;

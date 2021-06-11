@@ -1,0 +1,125 @@
+Bdistachyon	rgb(220,255,255)	Bd21.v3
+BdistachyonABR2	rgb(204,255,229)	ABR2
+BdistachyonABR3	rgb(255,255,220)	ABR3
+BdistachyonABR4	rgb(255,240,220)	ABR4
+BdistachyonABR5	rgb(229,255,204)	ABR5
+BdistachyonABR6	rgb(230,255,230)	ABR6
+BdistachyonABR7	rgb(204,255,255)	ABR7
+BdistachyonABR8	rgb(255,220,255)	ABR8
+BdistachyonABR9	rgb(204,255,204)	ABR9
+BdistachyonAdi-10	rgb(255,255,153)	Adi-10
+BdistachyonAdi-12	rgb(204,255,229)	Adi-12
+BdistachyonAdi-2	rgb(204,255,229)	Adi-2
+BdistachyonArn1	rgb(255,255,255)	Arn1
+BdistachyonBd1-1	rgb(204,255,229)	Bd1-1
+BdistachyonBd18-1	rgb(229,255,204)	Bd18-1
+BdistachyonBd21-3	rgb(204,255,255)	Bd21-3
+BdistachyonBd2-3	rgb(230,255,230)	Bd2-3
+BdistachyonBd29-1	rgb(255,255,255)	Bd29-1
+BdistachyonBd30-1	rgb(204,255,229)	Bd30-1
+BdistachyonBd3-1	rgb(255,255,255)	Bd3-1
+BdistachyonBdTR10c	rgb(204,255,229)	BdTR10
+BdistachyonBdTR11a	rgb(255,255,255)	BdTR11a
+BdistachyonBdTR11g	rgb(204,255,229)	BdTR11G
+BdistachyonBdTR11i	rgb(204,255,229)	BdTR11I
+BdistachyonBdTR12c	rgb(204,255,229)	BdTR12c
+BdistachyonBdTR13a	rgb(204,255,229)	BdTR13a
+BdistachyonBdTR13c	rgb(255,255,255)	BdTR13c
+BdistachyonBdTR1i	rgb(229,255,204)	BdTR1i
+BdistachyonBdTR2b	rgb(204,255,229)	BdTR2b
+BdistachyonBdTR2g	rgb(229,255,204)	BdTR2G
+BdistachyonBdTR3c	rgb(229,255,204)	BdTR3c
+BdistachyonBdTR5i	rgb(229,255,204)	BdTR5i
+BdistachyonBdTR7a	rgb(255,255,255)	BdTR7a
+BdistachyonBdTR8i	rgb(255,255,255)	BdTR8i
+BdistachyonBdTR9k	rgb(204,255,229)	BdTR9k
+BdistachyonBis-1	rgb(204,255,255)	Bis-1
+BdistachyonFoz1	rgb(255,255,255)	Foz1
+BdistachyonGaz-8	rgb(230,255,230)	Gaz-8
+BdistachyonJer1	rgb(255,255,153)	Jer1
+BdistachyonKah-1	rgb(204,255,229)	Kah-1
+BdistachyonKah-5	rgb(204,255,229)	Kah-5
+BdistachyonKoz-1	rgb(255,255,220)	Koz-1
+BdistachyonKoz-3	rgb(204,255,229)	Koz-3
+BdistachyonLuc1	rgb(230,255,230)	Luc1
+BdistachyonMig3	rgb(255,255,255)	Mig3
+BdistachyonMon3	rgb(204,255,204)	Mon3
+BdistachyonMur1	rgb(255,255,255)	Mur1
+BdistachyonPer1	rgb(255,255,255)	Per1
+BdistachyonRon2	rgb(255,255,255)	RON2
+BdistachyonS8iiC	rgb(255,255,255)	S8iiC
+BdistachyonSig2	rgb(255,255,255)	Sig2
+BdistachyonTek-2	rgb(255,255,255)	Tek-2
+BdistachyonTek-4	rgb(255,255,255)	Tek-4
+BdistachyonUni2	rgb(255,255,255)	Uni2
+#
+## Order by PWC (Fisher 2016: Drought stress...)
+## PWC > 70%
+##BdistachyonBd21AnntCtrl	rgb(220,255,255)
+#Bdistachyon	rgb(220,255,255)
+#BdistachyonBd21AsmbCtrl	rgb(220,255,255)
+#BdistachyonABR8	rgb(255,220,255)	Tolerant
+#BdistachyonABR9	rgb(204,255,204)
+#BdistachyonMon3	rgb(204,255,204)
+### PWC between 55% and 70%
+#BdistachyonLuc1	rgb(230,255,230)
+#BdistachyonBd2-3	rgb(230,255,230)
+#BdistachyonABR4	rgb(255,240,220)	Intermediate
+#BdistachyonABR6	rgb(230,255,230)
+#BdistachyonGaz-8	rgb(230,255,230)
+### PWC < 55%
+#BdistachyonJer1	rgb(255,255,153)
+#BdistachyonABR3	rgb(255,255,220)	Susceptible
+#BdistachyonAdi-10	rgb(255,255,153)
+#BdistachyonKoz-1	rgb(255,255,220)	Susceptible
+###
+### Order by Thermo-pluviometric index
+### TPI < 20. Dry medierranean lands
+#BdistachyonABR7	rgb(204,255,255)
+#BdistachyonBd21v2-1	rgb(204,255,255)
+#BdistachyonBd21-3	rgb(204,255,255)
+#BdistachyonBis-1	rgb(204,255,255)
+### TPI between 20 and 30. Olive and cereal lands
+#BdistachyonBdTR12c	rgb(204,255,229)
+#BdistachyonBdTR9k	rgb(204,255,229)
+#BdistachyonBd30-1	rgb(204,255,229)
+#BdistachyonBdTR13a	rgb(204,255,229)
+#BdistachyonBdTR2b	rgb(204,255,229)
+#BdistachyonKah-1	rgb(204,255,229)
+#BdistachyonKah-5	rgb(204,255,229)
+#BdistachyonAdi-12	rgb(204,255,229)
+#BdistachyonAdi-2	rgb(204,255,229)
+#BdistachyonBdTR11i	rgb(204,255,229)
+#BdistachyonBdTR10c	rgb(204,255,229)
+#BdistachyonKoz-3	rgb(204,255,229)
+#BdistachyonBd1-1	rgb(204,255,229)
+#BdistachyonBdTR11g	rgb(204,255,229)
+#BdistachyonABR2	rgb(204,255,229)
+### TPI between 30 and 40. Subhumid forests and meadows.
+#BdistachyonBdTR2g	rgb(229,255,204)
+#BdistachyonBdTR5i	rgb(229,255,204)
+#BdistachyonBd18-1	rgb(229,255,204)
+#BdistachyonBdTR3c	rgb(229,255,204)
+#BdistachyonBdTR1i	rgb(229,255,204)
+#BdistachyonABR5	rgb(229,255,204)
+### Others
+#BdistachyonBd3-1	rgb(255,255,255)
+#BdistachyonArn1	rgb(255,255,255)
+#BdistachyonBd29-1	rgb(255,255,255)
+#BdistachyonBdTR11a	rgb(255,255,255)
+#BdistachyonBdTR13c	rgb(255,255,255)
+#BdistachyonBdTR7a	rgb(255,255,255)
+#BdistachyonBdTR8i	rgb(255,255,255)
+#BdistachyonFoz1	rgb(255,255,255)
+#BdistachyonMig3	rgb(255,255,255)
+#BdistachyonMur1	rgb(255,255,255)
+#BdistachyonPer1	rgb(255,255,255)
+#BdistachyonRon2	rgb(255,255,255)
+#BdistachyonS8iiC	rgb(255,255,255)
+#BdistachyonSig2	rgb(255,255,255)
+#BdistachyonTek-2	rgb(255,255,255)
+#BdistachyonTek-4	rgb(255,255,255)
+#BdistachyonUni2	rgb(255,255,255)
+#Bstacei	rgb(255,255,255)
+#Bhybridum	rgb(255,255,255)
+#Bsylvaticum	rgb(255,255,255)

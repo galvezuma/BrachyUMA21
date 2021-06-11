@@ -23,7 +23,7 @@ import java.util.stream.Stream;
  * - Diamond: It has been manually curated.
  */
 public class GenerateSVG {
-    private static final String INPUT_DATA_FILE = "/datafiles/dehydrins_ecotypes.data"; // "G:\\Data_JIC\\NetBeansProjects\\Utilities\\src\\brachypodium\\varieties\\searchgenes\\dehydrins.sal";
+    private static final String INPUT_DATA_FILE = "datafiles/dehydrins_ecotypes.data"; // "G:\\Data_JIC\\NetBeansProjects\\Utilities\\src\\brachypodium\\varieties\\searchgenes\\dehydrins.sal";
     // Lengths of chromosomes taken from:
     // Genome sequencing and analysis of the model grass Brachypodium distachyon (https://www.nature.com/articles/nature08747)
     private static final int[] CHR_LENGTHS = {74834646, 59328898, 59892396, 48648102, 28648102};
@@ -32,7 +32,7 @@ public class GenerateSVG {
     private static String[] titles = {};
     static {
         String line = null;
-        try (BufferedReader in = Files.newBufferedReader(Paths.get("../datafiles/Order.txt"));){
+        try (BufferedReader in = Files.newBufferedReader(Paths.get("datafiles/Order.txt"));){
             List<String> colors = new ArrayList<>();
             List<String> texts = new ArrayList<>();
             while ((line = in.readLine()) != null)
@@ -291,7 +291,7 @@ public class GenerateSVG {
             "</script>"+
         "</head>\n" +
         "<body>"+
-        "<h1>Result of DEHYDRINS</h1>"+
+        "<h1 align='center' >DEHYDRINS in 54 ecotypes of Brachypodium distachyon<br/></h1>"+
         "<div id='tooltip' display='none' style='position: absolute; display: none;'></div>"+
         "<table style=\"border:0px;border-collapse:separate;\"><tr style=\"border:0px;\"><td style=\"border:0px;\">\n" +
 //        "<table>\n" +
@@ -331,7 +331,7 @@ public class GenerateSVG {
     }
 
     private static String initRow(String nameRow) {
-        return "<tr><td>"+nameRow+"</td>";
+        return "<tr><td style='text-anchor:end;font-family:Verdana;font-size:20px;'><strong>"+nameRow+"</strong></td>";
     }
     private static String endRow() {
         return "</tr>";
@@ -342,7 +342,7 @@ public class GenerateSVG {
         stb.append("<tr><th></th>");
         for(String title: titles) {
             stb.append("<th><svg width='24px' height='120px'>")
-                    .append("<text transform='rotate(270)' style='text-anchor:end;font-family:Verdana;font-size:20;' y='19'>")
+                    .append("<text transform='rotate(270)' style='text-anchor:end;font-family:Verdana;font-size:20px;' y='19'>")
                     .append(title)
                     .append("</text></svg></th>");
         }

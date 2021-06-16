@@ -23,9 +23,13 @@ to adapt to your own directory that contains the files taken from Phytozome. In 
 if (line.toUpperCase().contains("PF00257") || 
     line.toUpperCase().contains("DEHYDRIN")) { ...
 ```
-By default this refers to the LEA2 gene family of Dehydrins whose PFAM code is PF00257. You have to modify these lines to adapt them to your needs.
+By default this refers to the LEA2 gene family of Dehydrins whose PFAM code is PF00257. You have to modify these lines to adapt them to your needs. Genes are marked with different shapes according to the text found in it; this is done through the sentence:
+```
+String shape = line.toUpperCase().contains("PF00257")?"RECT":"TRIANGLE";
+```
+so a gene will be drawn as a square (PFAM code is found) or a triangle (PFAM code not found but, instead, a literal keyword) depending on its annotation in Phytozome.
 
-Once these changes have been carried out, compilation is carried by executing the next commands:
+Once these changes have been performed, compilation is carried by executing the next commands:
 ```
 cd scr
 javac es/uma/keyword/LookForKeyword.java

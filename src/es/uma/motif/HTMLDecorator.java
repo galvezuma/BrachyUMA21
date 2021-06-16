@@ -5,6 +5,9 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.LinkedList;
@@ -29,7 +32,8 @@ public class HTMLDecorator {
         int qty;
     }
     
-    public static void main(String[] args){
+    public static void main(String[] args) throws IOException{
+    	StringBuilder sb =
     	process("datafiles/all_varieties_DHN_peptide.fasta",
     	                new PerfectMatchArgument[]{
     	                    new PerfectMatchArgument("EKKGIMDKIKEKLPG", "KSegment", 4),
@@ -44,9 +48,14 @@ public class HTMLDecorator {
     	                    //new PatternArgument(Pattern.compile("LHR[ST]GS{4,6}[SDE][DE]{3}"), "SSegment"),
     	                    new PatternArgument(Pattern.compile("SSSS+"), "SSegment"),
     	                });
+    	// Generates the HTML using a template
+    	String skel = Files.readString(Paths.get("resources/hubVarietiesDHN.html"), StandardCharsets.UTF_8);
+    	skel = skel.replace("ALEA JACTA EST", sb.toString());
+    	Files.writeString(Paths.get("DHNSegments.html"), skel, StandardCharsets.UTF_8);
     }
     
-    public static void process(String filename, PerfectMatchArgument[] pf, PatternArgument[] p) {
+    public static StringBuilder process(String filename, PerfectMatchArgument[] pf, PatternArgument[] p) {
+    	StringBuilder sb = new StringBuilder();
         List<Sequence> seqs = loadFasta(filename);
         Map<String, List<Decorator>> ret = new HashMap<>();
         System.out.println("Searching...");
@@ -73,10 +82,11 @@ public class HTMLDecorator {
                 }
             }
             dataDecorated = seq.data.substring(0, last) + dataDecorated;
-            System.out.println("<tr><td>&nbsp;</td><td>&nbsp;</td><td class=\"Courier\">"+seq.name+"<br>");
-            System.out.println(dataDecorated+"</td></tr>");
+            sb.append("<tr><td class=\"Courier\">"+seq.name+"<br>\n");
+            sb.append(dataDecorated+"</td></tr>\n");
         });
         displaySummary(seqs, ret);
+        return sb;
     }
 
     private static void search (List<Sequence> seqs, Pattern r, Map<String, List<Decorator>> ret, String classname) {

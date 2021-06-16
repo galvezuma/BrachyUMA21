@@ -66,7 +66,7 @@ public class Sequence {
         }
     }
 
-    boolean belongsTo(String nameChromosome) {
+    public boolean belongsTo(String nameChromosome) {
         return name.contains("TRAES"+nameChromosome) || name.contains("Traes_"+nameChromosome);
     }
 
@@ -89,7 +89,7 @@ public class Sequence {
         }
     }
         
-    void locateAnyManyTimes(StringBuilder str, HashMap<String, HTMLDecorator.ResultPair> hm){
+    public void locateAnyManyTimes(StringBuilder str, HashMap<String, ResultPair> hm){
         int pos;
         // System.out.println("Trying: " + name);
         pos = -1;
@@ -116,8 +116,8 @@ public class Sequence {
         // System.out.println(name + "\t" + rp.pos+"\t"+rp.qty);
     }
 
-    private void registerPos(int pos, HashMap<String, HTMLDecorator.ResultPair> hm) {
-    	HTMLDecorator.ResultPair rp = hm.get(name);
+    private void registerPos(int pos, HashMap<String, ResultPair> hm) {
+    	ResultPair rp = hm.get(name);
         rp.qty++;
         rp.pos = (rp.qty == 1)? pos : 0 ;
     }

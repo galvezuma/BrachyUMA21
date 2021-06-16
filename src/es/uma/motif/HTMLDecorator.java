@@ -1,21 +1,17 @@
 package es.uma.motif;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileInputStream;
 import java.io.IOException;
-import java.io.InputStreamReader;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Paths;
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-import java.util.zip.GZIPInputStream;
+
+import es.uma.keyword.Looker;
 
 /**
  * This program loads a fasta file of proteins, searches for motives and generates a piece of HTML
@@ -26,11 +22,6 @@ import java.util.zip.GZIPInputStream;
  * 
  */
 public class HTMLDecorator {
-	
-    protected static class ResultPair {
-        int pos;
-        int qty;
-    }
     
     public static void main(String[] args) throws IOException{
     	StringBuilder sb =
@@ -56,7 +47,7 @@ public class HTMLDecorator {
     
     public static StringBuilder process(String filename, PerfectMatchArgument[] pf, PatternArgument[] p) {
     	StringBuilder sb = new StringBuilder();
-        List<Sequence> seqs = loadFasta(filename);
+        List<Sequence> seqs = Looker.loadFasta(filename);
         Map<String, List<Decorator>> ret = new HashMap<>();
         System.out.println("Searching...");
         for(PerfectMatchArgument pfArg: pf) 
@@ -164,53 +155,7 @@ public class HTMLDecorator {
             }
         });
     }
-    
-    public static List<Sequence> loadFasta(String filename) {
-        List<Sequence> ret = new ArrayList<>();
-        try (BufferedReader in = new BufferedReader(new InputStreamReader(new FileInputStream(new File(filename))))) {
-            ret = loadFasta(in);
-        } catch (Exception x) {
-            x.printStackTrace();
-        }
-        return ret;
-    }
-    
-    public static List<Sequence> loadFastaGZ(String filename) {
-        List<Sequence> ret = new ArrayList<>();
-        try (BufferedReader in = new BufferedReader(new InputStreamReader(new GZIPInputStream(new FileInputStream(filename))))) {
-            ret = loadFasta(in);
-        } catch (Exception x) {
-            x.printStackTrace();
-        }
-        return ret;
-    }
-    
-    public static List<Sequence> loadFasta(BufferedReader in) throws IOException {
-        List<Sequence> ret = new ArrayList<>();
-        String line;
-        StringBuilder sb = new StringBuilder();
-        Sequence seq = null;
-        while ((line = in.readLine()) != null) {
-            if (line.startsWith(">")) {
-                if (seq != null) {
-                    seq.data = sb.toString();
-                    ret.add(seq);
-                    sb = new StringBuilder();
-                }
-                seq = new Sequence(line);
-            } else {
-                sb.append(line);
-                //seq.data += line;
-            }
-        }
-        if (seq != null) {
-            seq.data = sb.toString();
-            ret.add(seq);
-            sb = null;
-        }
-        return ret;
-    }
-    
+        
 }
 
 

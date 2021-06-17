@@ -43,7 +43,7 @@ import es.uma.html.Gene;
  */
 public class LookForKeyword {
     private static final String DIR_NAME = "genomes/Phytozome/PhytozomeV13";
-    private static final String INPUT_DATA_FILE = "datafiles/Order.txt";
+    private static final String INPUT_DATA_FILE = "genomes/Order.txt";
     public static void main(String[] args) throws Exception {
         Path[] filesInOrder = getFilesInOrder();
         for(Path file: filesInOrder)

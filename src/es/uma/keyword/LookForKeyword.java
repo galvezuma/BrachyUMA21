@@ -9,6 +9,7 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.nio.charset.StandardCharsets;
+import java.nio.file.FileSystems;
 import java.nio.file.FileVisitResult;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -20,6 +21,7 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.regex.Pattern;
 import java.util.zip.GZIPInputStream;
 import es.uma.motif.Sequence;
 import es.uma.html.Gene;
@@ -204,7 +206,7 @@ public class LookForKeyword {
     }
 
     private static int buscar(List<String> order, String fileName) {
-        String[] subdirs = fileName.split("\\\\");
+        String[] subdirs = fileName.split(Pattern.quote(FileSystems.getDefault().getSeparator()));
         for(String subdir: subdirs){
             if (order.contains(subdir))
                 return order.indexOf(subdir);

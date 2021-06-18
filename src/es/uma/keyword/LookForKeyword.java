@@ -205,6 +205,8 @@ public class LookForKeyword {
         return null;
     }
 
+    // Name of ecotype should be part of the filename's path
+    //
     private static int buscar(List<String> order, String fileName) {
         String[] subdirs = fileName.split(Pattern.quote(FileSystems.getDefault().getSeparator()));
         for(String subdir: subdirs){

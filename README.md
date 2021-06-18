@@ -1,5 +1,5 @@
-# BrachyUMA21
-Short Java programs to deal with Brachypodium distachyon ecotypes. Java 11.
+# BrachyUMA21 ![](https://img.shields.io/badge/Code-Java&nbsp;11-informational?style=plastic&logo=Java&logoColor=white&color=2bbc8a)
+Short Java programs to deal with Brachypodium distachyon ecotypes. 
 
 This project contains three programs to extract information from data files extracted from [Phytozome](https://phytozome.jgi.doe.gov/pz/portal.html). In particular:
 * **es.uma.keyword.LookForKeyword**: Allows iterating through the fasta and gff3 files associated to several species and extract information related to a family of genes. Before working with this package, you have to download some files from Phytozome, configure some lines of source Java files and recompile. The program can be executed as is by means of the sample files already provided in the folder `"genomes/Phytozome/PhytozomeV13"`.

@@ -31,12 +31,13 @@ so a gene will be drawn as a square (PFAM code is found) or a triangle (PFAM cod
 
 Once these changes have been performed, compilation is carried by executing the next commands:
 ```
-cd scr
+cd src
 javac es/uma/keyword/LookForKeyword.java
 ```
 and executed using 
 ```
-java es.uma.keyword.LookForKeyword
+cd ..
+java -cp ./src es.uma.keyword.LookForKeyword
 ```
 The result is displayed by console.
 

@@ -189,7 +189,7 @@ public class LookForKeyword {
                 public FileVisitResult visitFile(Path file, BasicFileAttributes attrs) throws IOException {
                     String fileName = file.toAbsolutePath().toString();
                     if (fileName.endsWith(".txt")) {
-                        int pos = buscar(order, fileName);
+                        int pos = search(order, fileName);
                         if (pos >= 0)
                             ret[pos] = file;
                     }
@@ -207,7 +207,7 @@ public class LookForKeyword {
 
     // Name of ecotype should be part of the filename's path
     //
-    private static int buscar(List<String> order, String fileName) {
+    private static int search(List<String> order, String fileName) {
         String[] subdirs = fileName.split(Pattern.quote(FileSystems.getDefault().getSeparator()));
         for(String subdir: subdirs){
             if (order.contains(subdir))

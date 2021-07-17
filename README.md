@@ -2,7 +2,7 @@
 > This repository contains data and instructions to run JAVA programs and scripts used in different analyses of Brachypodium dehydrins (Bdhn) data and other phenotypic and climate niche data included in the paper "Evolution and functional dynamics of dehydrins in model Brachypodium grasses" coauthored by Maria Ángeles Decena, Sergio Galvez-Rojas, Federico Agostini, Rubén Sancho, Bruno Contreras-Moreira, David L. Des Marais, Pilar Hernández and Pilar Catalán.
 
 ## Table of Contents
-* [Java programs](#java-programs)
+* [Java programs](#java-programs-)
 * [Brachypodium Bdhn genes CREs](#brachypodium-bdhn-genes-cres)
 * [Brachypodium Bdhn MSAs phylogenies expression](#msa)
 * [Bdistachyon Bdhn expression drought phenotypes climate niche statistics phylogenetic signal](#rscript)

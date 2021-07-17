@@ -3,7 +3,7 @@
 
 ## Table of Contents
 * [Java programs](#java-programs)
-* [Brachypodium Bdhn genes CREs](#brachypodium_bdhn_genes_cres)
+* [Brachypodium Bdhn genes CREs](#brachypodium-bdhn-genes-cres)
 * [Brachypodium Bdhn MSAs phylogenies expression](#msa)
 * [Bdistachyon Bdhn expression drought phenotypes climate niche statistics phylogenetic signal](#rscript)
 * [Supplementary_Data](#supplementary-data)

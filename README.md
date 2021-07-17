@@ -100,7 +100,7 @@ This folder contains data and results of the *de novo* discovery analysis of cis
 The original input dataset is file "01_Bdhn_Brachypodium_promoters.fasta" which contains 47 Bdhn promoter sequences with a length from -500bp to +200 bp around the initial transcription site. 
 Analyses were performed at http://rsat.eead.csic.es/plants/
 1. Peak-motif tool was used to detect over-represented motif at each Bdhn promoter sequence. Brachypodium genomes from each sampled species were used as background.
-    The analysis was run four times, using the corresponding background genome each time (*B. distachyon* Bd21 v3.0.46, *B. stacei* ABR114 v1.1.JGI, *B. hybridum* ABR113 v1.1.JGI, *B. sylvaticum* Ain1v1.1.JGI) 
+    The analysis was run four times, using the corresponding background genome each time (*B. distachyon* Bd21 v3.0.46, *B. stacei* ABR114 v1.1.JGI, *B. hybridum* ABR113 v1.1.JGI, *B. sylvaticum* Ain1v1.1.JGI). 
     Significance of the motif discovery were evaluated using negative controls, consisting in 47 promoter sequences of randomly picked up genes from each background genome analysed under the same conditions as the Bdhn promoters.
   Results from the four analyses are in file "02_Brachypodium_Bdhn_Peak.tf". This file is the input file for the next step.
 2. Matrix-clustering tool. Significant motifs were selected based on (i) their k-mer composition?/ distribution?, and (ii) number of sites (hits? ….?). Those motifs were clustered to avoid redundant motifs. 

@@ -109,7 +109,7 @@ Analyses were performed at http://rsat.eead.csic.es/plants/
 Results from this analysis are included in gff3 files for each Brachypodium species in the folder 04_Brachypodium_Bdhn_scan. Motif frecuency results are shown in Table 3.
 
 ## Brachypodium_Bdhn_MSAs_phylogenies:
-This folder contains the alignments of the 10 Bdhn genes retrieved from 4 Brachypodium species (B.distachyon, B.stacei, B.hybridum subgenomes D and S, and B. sylvaticum) plus 5 outgroup species (A. tauschii, H. vulgare, S. bicolor, O. sativa, and Z. mays). Additionally, it also contains the alignments of the 10 Bdhn genes retrieved from 54 B. distachyon ecotypes. 
+This folder contains the alignments of the 10 Bdhn genes retrieved from 4 Brachypodium species (*B.distachyon*, *B.stacei*, *B.hybridum* subgenomes D and S, and *B. sylvaticum*) plus 5 outgroup species (*A. tauschii*, *H. vulgare*, *S. bicolor*, *O. sativa*, and *Z. mays*). Additionally, it also contains the alignments of the 10 Bdhn genes retrieved from 54 *B. distachyon* ecotypes. 
 These files were used in the phylogenetic analyses of the dehydrin genes. 
 - READMe file: description of multiple sequence alignment (MSA) folders.
 This folder contains:

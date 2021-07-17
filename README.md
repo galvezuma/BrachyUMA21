@@ -3,7 +3,7 @@
 
 ## Table of Contents
 * [Java programs](#java-programs)
-* [Brachypodium Bdhn genes CREs](#cres)
+* [Brachypodium Bdhn genes CREs](#brachypodium_bdhn_genes_cres)
 * [Brachypodium Bdhn MSAs phylogenies expression](#msa)
 * [Bdistachyon Bdhn expression drought phenotypes climate niche statistics phylogenetic signal](#rscript)
 * [Supplementary_Data](#supplementary-data)
@@ -90,7 +90,7 @@ java -cp ./src es.uma.motif.HTMLDecorator
 This will display on console a trace of the motives found in each genes processed and, in addition, a file `DHNSegments.html` will be generated in the root directory. Such a file has the next appearance:
 ![Dehydrins](images/DHN_Segments.png?raw=true "Dehydrins")
 
-## Brachypodium_Bdhn_genes_CREs
+## Brachypodium Bdhn genes CREs
 - 01_Bdhn_Brachypodium_promoters.fasta: Bdhn promoter sequences, with a window of  -500bp to +200pb.
 - 02_Brachypodium_Bdhn_Peak.tf: output of Peak-motif as a transfact file.
 - 03_CRE_Bdhn.tf: final clusters ID from Matrix-clustering

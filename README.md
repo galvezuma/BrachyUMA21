@@ -117,7 +117,7 @@ This folder contains:
 Additionally, there is another folder containing annotation files for each Bdhn gene.
 2. B.distachyon_MSAs: a folder containing alignments (exon+intron sequences) of each of the 10 Bdhn genes for the 54 *B. distachyon* ecotypes plus outgroup *B. stacei*. These files were used to perform phylogenetic analyses. The resulting Bdhn ML gene trees are shown in Supplementary Fig. S4. 
 Additionally, there is another folder containing annotation files for each Bdhn gene.
-3. B.distachyon_Bdhns_concatenated_MSA.fna: An aligment of 6 Bdhn genes (Bdhn1, Bdhn2, Bdhn3, Bdhn6, Bdhn7, Bdhn8) that showed a congruent topology for the 54 *B.distachyon* ecotypes. This file was used to compute the B. distachyon Bdhn tree shown in Supplementary Fig. 5Sa.
+3. B.distachyon_Bdhns_concatenated_MSA.fna: An aligment of 6 Bdhn genes (Bdhn1, Bdhn2, Bdhn3, Bdhn6, Bdhn7, Bdhn8) that showed a congruent topology for the 54 *B. distachyon* ecotypes. This file was used to compute the *B. distachyon* Bdhn tree shown in Supplementary Fig. 5Sa.
 4. Bdistachyon_Bdhn_concatenated_MSA.fna: An alignment file of 10 concatenated Bdhn genes ….
 
 ## Bdistachyon_Bdhn expression_drought_phenotypes_climate niche_statistics_phylogenetic signal: this repository contains six folders with input files and Rscrips used in different analyses of Bdhn expression, drought-related phenotypic traits, climate niche data and phylogenetic signals in B. distachyon lines. 

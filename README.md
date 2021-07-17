@@ -91,13 +91,13 @@ This will display on console a trace of the motives found in each genes processe
 ![Dehydrins](images/DHN_Segments.png?raw=true "Dehydrins")
 
 ## Brachypodium Bdhn genes CREs
-- 01_Bdhn_Brachypodium_promoters.fasta: Bdhn promoter sequences, with a window of  -500bp to +200pb.
+- 01_Bdhn_Brachypodium_promoters.fasta: Bdhn promoter sequences, with a window from -500bp to +200pb.
 - 02_Brachypodium_Bdhn_Peak.tf: output of Peak-motif as a transfact file.
-- 03_CRE_Bdhn.tf: final clusters ID from Matrix-clustering
-- 04_Brachypodium_Bdhn_scan: gff3 files from Matrix-scan
+- 03_CRE_Bdhn.tf: final clusters ID from Matrix-clustering.
+- 04_Brachypodium_Bdhn_scan: gff3 files from Matrix-scan.
 - READMe: description of every analysis to detected CREs at Bdhn promoter sequences:
 This folder contains data and results of the de novo discovery analysis of cis-regulatory elements across 47 Bdhn gene promoters from four Brachypodium species using Rsat::plants.
-The original input dataset is file "01_Bdhn_Brachypodium_promoters.fasta" which contains 47 Bdhn promoter sequences with a length of -500bp to +200 bp around the initial transcription site. 
+The original input dataset is file "01_Bdhn_Brachypodium_promoters.fasta" which contains 47 Bdhn promoter sequences with a length from -500bp to +200 bp around the initial transcription site. 
 Analyses were performed at http://rsat.eead.csic.es/plants/
 1. Peak-motif tool was used to detect over-represented motif at each Bdhn promoter sequence. Brachypodium genomes from each sampled species were used as background.
     The analysis was run four times, using the corresponding background genome each time (B. distachyon Bd21 v3.0.46, B. stacei ABR114 v1.1.JGI, B. hybridum ABR113 v1.1.JGI, B. sylvaticum Ain1v1.1.JGI) 
